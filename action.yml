@@ -1,6 +1,6 @@
-name: 'TODO: Run <linter-name> with reviewdog'
-description: 'TODO: 🐶 Run <linter-name> with reviewdog on pull requests to improve code review experience.'
-author: 'TODO: <your-name>'
+name: 'Run phpcs-wordpress with reviewdog'
+description: '🐶 Run phpcs-wordpress with reviewdog on pull requests to improve code review experience.'
+author: 'oohnoitz'
 inputs:
   github_token:
     description: 'GITHUB_TOKEN'
@@ -8,7 +8,6 @@ inputs:
   workdir:
     description: 'Working directory relative to the root directory.'
     default: '.'
-  ### Flags for reviewdog ###
   level:
     description: 'Report level for reviewdog [info,warning,error]'
     default: 'error'
@@ -28,10 +27,9 @@ inputs:
   reviewdog_flags:
     description: 'Additional reviewdog flags'
     default: ''
-  ### Flags for <linter-name> ###
-  locale:
-    description: '-locale flag of misspell. (US/UK)'
-    default: ''
+  phpcs_args:
+    description: ''
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
