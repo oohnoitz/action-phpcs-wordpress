@@ -15,6 +15,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
           level: info
+          tool_name: 'phpcs-check'
           phpcs_args: '--standard=WordPress .'
           workdir: testdata
 
