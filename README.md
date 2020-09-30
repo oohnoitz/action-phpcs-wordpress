@@ -25,6 +25,9 @@ inputs:
   level:
     description: 'Report level for reviewdog [info,warning,error]'
     default: 'error'
+  tool_name:
+    description: 'Tool name to use for reviewdog reporter'
+    default: 'phpcs'
   reporter:
     description: 'Reporter of reviewdog command [github-pr-check,github-check,github-pr-review].'
     default: 'github-pr-check'
@@ -48,13 +51,11 @@ inputs:
 ```
 
 ## Usage
-<!-- TODO: update. replace `template` with the linter name -->
 
 ```yaml
 name: reviewdog
 on: [pull_request]
 jobs:
-  # TODO: change `linter_name`.
   linter_name:
     name: runner / phpcs
     runs-on: ubuntu-latest
