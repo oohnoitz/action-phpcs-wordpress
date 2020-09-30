@@ -9,6 +9,8 @@
 
 This action will run `phpcs` together with [reviewdog](https://github.com/reviewdog/reviewdog) to create a report for your pull requests. It was created by using the [action-template](https://github.com/reviewdog/action-template) created by the reviewdog team.
 
+The WordPress rulesets are bundled and made available to `phpcs`.
+
 ## Input
 
 ```yaml

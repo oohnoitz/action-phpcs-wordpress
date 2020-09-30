@@ -28,7 +28,7 @@ inputs:
     description: 'Additional reviewdog flags'
     default: ''
   phpcs_args:
-    description: ''
+    description: 'Additional PHPCS flags'
     default: '.'
 runs:
   using: 'docker'
