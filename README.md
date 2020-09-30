@@ -1,17 +1,16 @@
-# reviewdog-action-phpcs-wordpress
+# action-phpcs-wordpress
 
-[![Test](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/workflows/Test/badge.svg)](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/actions?query=workflow%3ATest)
-[![reviewdog](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/workflows/reviewdog/badge.svg)](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/actions?query=workflow%3Areviewdog)
-[![depup](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/workflows/depup/badge.svg)](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/actions?query=workflow%3Adepup)
-[![release](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/workflows/release/badge.svg)](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/actions?query=workflow%3Arelease)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/oohnoitz/reviewdog-action-phpcs-wordpress?logo=github&sort=semver)](https://github.com/oohnoitz/reviewdog-action-phpcs-wordpress/releases)
+[![Test](https://github.com/oohnoitz/action-phpcs-wordpress/workflows/Test/badge.svg)](https://github.com/oohnoitz/action-phpcs-wordpress/actions?query=workflow%3ATest)
+[![reviewdog](https://github.com/oohnoitz/action-phpcs-wordpress/workflows/reviewdog/badge.svg)](https://github.com/oohnoitz/action-phpcs-wordpress/actions?query=workflow%3Areviewdog)
+[![depup](https://github.com/oohnoitz/action-phpcs-wordpress/workflows/depup/badge.svg)](https://github.com/oohnoitz/action-phpcs-wordpress/actions?query=workflow%3Adepup)
+[![release](https://github.com/oohnoitz/action-phpcs-wordpress/workflows/release/badge.svg)](https://github.com/oohnoitz/action-phpcs-wordpress/actions?query=workflow%3Arelease)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/oohnoitz/action-phpcs-wordpress?logo=github&sort=semver)](https://github.com/oohnoitz/action-phpcs-wordpress/releases)
 [![action-bumpr supported](https://img.shields.io/badge/bumpr-supported-ff69b4?logo=github&link=https://github.com/haya14busa/action-bumpr)](https://github.com/haya14busa/action-bumpr)
 
 This action will run `phpcs` together with [reviewdog](https://github.com/reviewdog/reviewdog) to create a report for your pull requests. It was created by using the [action-template](https://github.com/reviewdog/action-template) created by the reviewdog team.
 
 ## Input
 
-<!-- TODO: update -->
 ```yaml
 inputs:
   github_token:
@@ -59,7 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: oohnoitz/reviewdog-action-phpcs-wordpress@v1
+      - uses: oohnoitz/action-phpcs-wordpress@v1
         with:
           github_token: ${{ secrets.github_token }}
           # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
