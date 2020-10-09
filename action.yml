@@ -1,5 +1,5 @@
 name: 'Run phpcs-wordpress with reviewdog'
-description: '🐶 Run phpcs-wordpress with reviewdog on pull requests to improve code review experience.'
+description: '🐶 Run PHPCS for WordPress with reviewdog on pull requests to improve code review experience.'
 author: 'oohnoitz'
 inputs:
   github_token:
@@ -33,6 +33,9 @@ inputs:
   phpcs_args:
     description: 'Additional PHPCS flags'
     default: '.'
+  phpcs_standard:
+    description: 'Coding standard for PHPCS to use when checking files'
+    default: 'WordPress'
 runs:
   using: 'docker'
   image: 'Dockerfile'

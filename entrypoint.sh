@@ -6,10 +6,11 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-/usr/local/bin/phpcs.phar --config-set installed_paths /tmp/wpcs
+/usr/local/bin/phpcs.phar --config-set installed_paths /tmp/rulesets
 
 /usr/local/bin/phpcs.phar \
   --report-checkstyle \
+  --standard="${INPUT_PHPCS_STANDARD}" \
   ${INPUT_PHPCS_ARGS:-\.} \
   | reviewdog -f="checkstyle" \
       -name="${INPUT_TOOL_NAME}" \
