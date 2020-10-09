@@ -48,6 +48,9 @@ inputs:
   phpcs_args:
     description: 'Additional PHPCS flags'
     default: '.'
+  phpcs_standard:
+    description: 'Coding standard for PHPCS to use when checking files'
+    default: 'WordPress'
 ```
 
 ## Usage
@@ -69,7 +72,6 @@ jobs:
           # Change reporter level if you need.
           # GitHub Status Check won't become failure with warning.
           level: warning
-          phpcs_args: '--standard=WordPress .'
 ```
 
 ## Development

@@ -33,6 +33,9 @@ inputs:
   phpcs_args:
     description: 'Additional PHPCS flags'
     default: '.'
+  phpcs_standard:
+    description: 'Coding standard for PHPCS to use when checking files'
+    default: 'WordPress'
 runs:
   using: 'docker'
   image: 'Dockerfile'
