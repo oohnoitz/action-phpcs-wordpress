@@ -74,6 +74,26 @@ jobs:
           level: warning
 ```
 
+### PHPCS Coding Standards
+
+The following sniffs are currently available. You can configure the standard(s) used by using the `phpcs_standard` input setting. By default, `WordPress` is used.
+
+- MySource
+- PEAR
+- PHPCompatibility
+- PHPCompatibilityWP
+- PSR1
+- PSR12
+- PSR2
+- Squiz
+- Wordpress (default)
+- WordPress-Core
+- Wordpress-Docs
+- WordPress-Extra
+- WordPress-VIP-Go
+- WordPressVIPMinimum
+- Zend
+
 ## Development
 
 ### Release
