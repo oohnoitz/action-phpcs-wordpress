@@ -7,7 +7,7 @@
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/oohnoitz/action-phpcs-wordpress?logo=github&sort=semver)](https://github.com/oohnoitz/action-phpcs-wordpress/releases)
 [![action-bumpr supported](https://img.shields.io/badge/bumpr-supported-ff69b4?logo=github&link=https://github.com/haya14busa/action-bumpr)](https://github.com/haya14busa/action-bumpr)
 
-This action will run `phpcs` together with [reviewdog](https://github.com/reviewdog/reviewdog) to create a report for your pull requests. It was created by using the [action-template](https://github.com/reviewdog/action-template) created by the reviewdog team.
+This action will run `PHPCS` together with [reviewdog](https://github.com/reviewdog/reviewdog) to create a report for your pull requests. It was created by using the [action-template](https://github.com/reviewdog/action-template) created by the reviewdog team.
 
 The WordPress rulesets are bundled and made available to `phpcs`.
 

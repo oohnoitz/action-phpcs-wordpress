@@ -1,5 +1,5 @@
 name: 'Run phpcs-wordpress with reviewdog'
-description: '🐶 Run phpcs-wordpress with reviewdog on pull requests to improve code review experience.'
+description: '🐶 Run PHPCS for WordPress with reviewdog on pull requests to improve code review experience.'
 author: 'oohnoitz'
 inputs:
   github_token:
