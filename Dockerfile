@@ -30,7 +30,7 @@ RUN chmod +x /usr/local/bin/phpcs.phar
 RUN mkdir -p /tmp/rulesets
 RUN wget -O - -q https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/archive/${RULESET_WP_CODING_STANDARDS_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/WordPress*'
 RUN wget -O - -q https://github.com/Automattic/VIP-Coding-Standards/archive/${RULESET_VIP_CODING_STANDARDS_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/WordPress*'
-RUN wget -O - -q https://github.com/sirbrillig/phpcs-variable-analysis/archive/${RULESET_PHPCS_VARIABLE_ANALYSIS_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/VariableAnalysis*'
+RUN wget -O - -q https://github.com/sirbrillig/phpcs-variable-analysis/archive/v${RULESET_PHPCS_VARIABLE_ANALYSIS_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/VariableAnalysis*'
 RUN wget -O - -q https://github.com/PHPCompatibility/PHPCompatibility/archive/${RULESET_PHP_COMPATIBILITY_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/PHPCompatibility*'
 RUN wget -O - -q https://github.com/PHPCompatibility/PHPCompatibilityWP/archive/${RULESET_PHP_COMPATIBILITY_WP_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/PHPCompatibility*'
 
