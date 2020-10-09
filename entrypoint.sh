@@ -6,7 +6,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-/usr/local/bin/phpcs.phar --config-set installed_paths /tmp/wpcs
+/usr/local/bin/phpcs.phar --config-set installed_paths /tmp/rulesets
 
 /usr/local/bin/phpcs.phar \
   --report-checkstyle \
