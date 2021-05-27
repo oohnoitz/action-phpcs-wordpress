@@ -2,7 +2,7 @@ FROM php:7.4-alpine
 
 # tools
 ENV REVIEWDOG_VERSION=v0.11.0
-ENV PHPCS_VERSION=3.5.6
+ENV PHPCS_VERSION=3.6.0
 
 # rulesets
 # https://github.com/WordPress/WordPress-Coding-Standards
@@ -11,10 +11,10 @@ ENV PHPCS_VERSION=3.5.6
 # https://github.com/phpcompatibility/phpcompatibility/releases
 # https://github.com/phpcompatibility/phpcompatibilitywp/releases
 ENV RULESET_WP_CODING_STANDARDS_VERSION=2.3.0 \
-  RULESET_VIP_CODING_STANDARDS_VERSION=2.2.0 \
-  RULESET_PHPCS_VARIABLE_ANALYSIS_VERSION=2.9.0 \
+  RULESET_VIP_CODING_STANDARDS_VERSION=2.3.2 \
+  RULESET_PHPCS_VARIABLE_ANALYSIS_VERSION=2.11.0 \
   RULESET_PHP_COMPATIBILITY_VERSION=9.3.5 \
-  RULESET_PHP_COMPATIBILITY_WP_VERSION=2.1.0
+  RULESET_PHP_COMPATIBILITY_WP_VERSION=2.1.1
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
