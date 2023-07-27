@@ -9,7 +9,7 @@ jobs:
     name: runner / phpcs-wordpress (github-check)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: ./
         with:
           github_token: ${{ secrets.github_token }}
@@ -24,7 +24,7 @@ jobs:
     name: runner / phpcs-wordpress (github-pr-check)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: ./
         with:
           github_token: ${{ secrets.github_token }}
@@ -38,7 +38,7 @@ jobs:
     name: runner / phpcs-wordpress (github-pr-review)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: ./
         with:
           github_token: ${{ secrets.github_token }}
