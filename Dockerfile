@@ -1,7 +1,7 @@
 FROM php:7.4-alpine
 
 # tools
-ENV REVIEWDOG_VERSION=v0.14.2
+ENV REVIEWDOG_VERSION=v0.15.0
 ENV PHPCS_VERSION=3.6.2
 
 # rulesets
