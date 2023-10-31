@@ -7,7 +7,7 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-phpcs \
+/root/.composer/vendor/bin/phpcs \
 	--report-checkstyle \
 	--standard="${INPUT_PHPCS_STANDARD}" \
 	${INPUT_PHPCS_ARGS:-\.} |
