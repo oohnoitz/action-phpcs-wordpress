@@ -16,17 +16,16 @@ SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 
 # hadolint ignore=DL3006
 RUN apk --no-cache add git
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
+
+RUN composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+RUN composer global require "squizlabs/php_codesniffer:^3.0"
+RUN composer global require "wp-coding-standards/wpcs:^3.0"
+RUN composer global require "phpcsstandards/phpcsextra:^1.1.0"
+RUN composer global require "phpcsstandards/phpcsutils:^1.0"
 
 # tools
 RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh | sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
-RUN wget -P /usr/local/bin -q https://github.com/squizlabs/PHP_CodeSniffer/releases/download/${PHPCS_VERSION}/phpcs.phar
-RUN chmod +x /usr/local/bin/phpcs.phar
-
-# rulesets
-RUN mkdir -p /tmp/rulesets
-RUN wget -O - -q https://github.com/WordPress/WordPress-Coding-Standards/archive/${RULESET_WP_CODING_STANDARDS_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/WordPress*'
-RUN wget -O - -q https://github.com/Automattic/VIP-Coding-Standards/archive/${RULESET_VIP_CODING_STANDARDS_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/WordPress*'
-RUN wget -O - -q https://github.com/sirbrillig/phpcs-variable-analysis/archive/v${RULESET_PHPCS_VARIABLE_ANALYSIS_VERSION}.tar.gz | tar zxv -C /tmp/rulesets --strip-components 1 --wildcards-match-slash --wildcards '*/VariableAnalysis*'
 
 COPY entrypoint.sh /entrypoint.sh
 
