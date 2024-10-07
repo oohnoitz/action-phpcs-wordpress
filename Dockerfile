@@ -1,4 +1,4 @@
-FROM php:8.2-alpine
+FROM php:8.3-alpine
 
 # tools
 ENV REVIEWDOG_VERSION=v0.20.2
