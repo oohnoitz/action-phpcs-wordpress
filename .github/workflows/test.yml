@@ -9,7 +9,7 @@ jobs:
     name: runner / phpcs-wordpress (github-check)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: ./
         with:
           github_token: ${{ secrets.github_token }}
@@ -24,7 +24,7 @@ jobs:
     name: runner / phpcs-wordpress (github-pr-check)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: ./
         with:
           github_token: ${{ secrets.github_token }}
@@ -38,7 +38,7 @@ jobs:
     name: runner / phpcs-wordpress (github-pr-review)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
       - uses: ./
         with:
           github_token: ${{ secrets.github_token }}
